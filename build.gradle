@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //passay RandomPasswordGenerator
+    implementation 'org.passay:passay:1.6.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    //Assertj : test 코드 작성을 위해
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+
+    // 여러 파라미터 검증용 @ParameterizedTest, @ValueSource 등 사용
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
